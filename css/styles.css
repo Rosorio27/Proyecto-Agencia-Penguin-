@@ -34,15 +34,19 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem; 
+    padding: 0; 
     align-items: center;
-    margin: 0;
+    margin: 0.5rem;
+    height: 50px;
+    background-color: var(--color-fondo);
+    border-bottom: solid var(--color-naranja);
+    overflow: hidden;
 }
 
 header ul {
     list-style-type: none;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 } 
 
 header ul a{
@@ -53,9 +57,9 @@ header ul a{
 }
 
 header img {
-    width: 120px;
+    width: 100px;
     height: auto;
-    object-fit: contain;
+    object-fit:cover;
 }
 
 header ul a:hover {
@@ -65,46 +69,44 @@ header ul a:hover {
 
 /*hero de la pagina*/
 #hero{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    justify-items: center;
+   background-image: url('../assets/imagenes/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
     align-items: center;
-    padding: 0 1rem;
-    gap: 0.5rem;
-}
-
-.hero_image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.hero_image img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 12px;
+    padding: 4rem 3rem;
 }
 
 .hero_texto {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;;
     gap: 1.5rem;
     padding: 2rem;
+     max-width: 850px;
 }
 
-.hero_texto  h1 {
+.hero_etiqueta {
+    color: var(--color-naranja);
+    font-size: var(--fs-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero_texto h1 {
     font-size: var(--fs-h1);
-    line-height: 1.2;
-    text-align: center;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #ffffff;
 }
 
-.hero_texto  h2 {
+.hero_texto h2 {
     font-size: var(--fs-h3);
     font-weight: 400;
-    color: var(--color-gris);
+    color: #ffffff;
+    
 }
 
 .cta-hero {
@@ -115,6 +117,10 @@ header ul a:hover {
     padding: 0.75rem 2rem;
     font-weight: 700;
     font-size: var(--fs-body);
+}
+
+.cta-hero:hover {
+    background-color: var(--color-gris);
 }
 /***************************************************************************************************************************************************************************************/
 /*Sobre nosotros*/
