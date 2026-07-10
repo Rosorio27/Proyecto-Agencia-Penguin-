@@ -101,7 +101,7 @@
             <section id="portafolio">
                 <h2>Clientes que confían en nosotros</h2>
 
-                <div class="contenerdor_portafolio">
+                <div class="contenedor_portafolio">
                     <div class="columna">
                         <div>
                             <img src="assets/imagenes/identidad_de_marca.jpg" alt="imagen de proyecto">
@@ -148,74 +148,97 @@
             </section>
 
             <section id="testimonios">
-                <h2>Testimonios</h2>
-                
-                <figure class="testimonio">
-                     <blockquote>
-                        <p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p>
-                    </blockquote>
-                <figcaption>
-                     - María Gómez, <strong>CEO en TechSolutions</strong>
-                </figcaption>
-                </figure>
+                <h2 class="encabezado_testimonio">Testimonios</h2>
 
-                <figure class="testimonio">
-                     <blockquote>
-                        <p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p>
-                    </blockquote>
-                <figcaption>
-                     - María Gómez, <strong>CEO en TechSolutions</strong>
-                </figcaption>
-                </figure>
+                <div class="contenedor_testiminios">
+                         <figure class="testimonio">
+                         <blockquote>
+                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                           <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                        </blockquote>
+                        <figcaption class="pie_de_imagen">
+                         - María Gómez, <strong>CEO en TechSolutions</strong>
+                        </figcaption>
+                        </figure>
+                   
+                    <figure class="testimonio">
+                         <blockquote>
+                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                            <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                        </blockquote>
+                    <figcaption class="pie_de_imagen">
+                         - María Gómez, <strong>CEO en TechSolutions</strong>
+                    </figcaption>
+                    </figure>
 
-                <figure class="testimonio">
-                     <blockquote>
-                        <p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p>
-                    </blockquote>
-                <figcaption>
-                     - María Gómez, <strong>CEO en TechSolutions</strong>
-                </figcaption>
-                </figure>
+                    <figure class="testimonio">
+                         <blockquote>
+                            <span class="estrellas">⋆ ⋆ ⋆ ⋆ ⋆</span>
+                           <span class="mensaje_testimonio"><p>"El servicio fue excepcional y superó todas mis expectativas. Recomiendo ampliamente su plataforma."</p></span> 
+                        </blockquote>
+                    <figcaption class="pie_de_imagen">
+                         - María Gómez, <strong>CEO en TechSolutions</strong>
+                    </figcaption>
+                    </figure>
+                </div>
+     
             </section>
 
             <section id="contacto">
-                <h2>Contacto</h2>
-                     <form method="post">
-                            <div>
-                                <label for="name">Nombre completo: </label>
-                                 <input type="text" id="name" name="nombre" required/>
+                <span class="encabezado_formulario"><h2>Contacto</h2></span>
+                        <form method="post">
+                        <div class="contenedor_formulario">
+                            <div class="columna_formulario">
+                                <div class="campos">
+                                    <label for="name">Nombre completo</label>
+                                    <input type="text" id="name" name="nombre" required/>
+                                </div>
+                            
+                                <div class="campos">
+                                    <label for="email">Correo electronico</label>
+                                    <input type="email" id="email" name="email">
+                                </div>
+                            
+                                <div class="campos">
+                                     <label for="tel">Telefono</label>
+                                    <input type="tel" id="tel" name="tel">
+                                </div>
+                            
+                                <div class="campos">
+                                    <label for="servicio">Selecciona servicio de tu interes </label>
+                                    <select name="servicio" id="servicio">
+                                        <option value="" disabled></option>
+                                        <option value="identidad_marca">Identidad de marca</option>
+                                        <option value="redes_sociales">Gestion de redes sociales</option>
+                                        <option value="creacion_digital">Creacion digital</option>
+                                    </select>
+                                </div>
+
+                                <div class="campos">
+                                    <button type="submit">Enviar</button>
+                                </div>
                             </div>
                             
-                            <div>
-                                <label for="email">Correo electronico:  </label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                            
-                            <div>
-                                 <label for="tel">Telefono: </label>
-                                <input type="tel" id="tel" name="tel">
-                            </div>
-                            
-                            <div>
-                                <label for="servicio">Selecciona servicio de tu interes </label>
-                                <select name="servicio" id="servicio">
-                                    <option value="" disabled></option>
-                                    <option value="identidad_marca">Identidad de marca</option>
-                                    <option value="redes_sociales">Gestion de redes sociales</option>
-                                    <option value="creacion_digital">Creacion digital</option>
-                                </select>
+                            <div class="contacto_directo">
+                               <h3>¿Prefieres escribirnos directamente?</h3>
+                               <div class="labels_contacto">
+                                    <p>Estamos disponibles para atenderte</p>
+                                    <a href="https://wa.me/50488961419" target="_blank" rel="noopener noreferrer" class="cta-hero">
+                                        Hablemos por WhatsApp
+                                    </a>
+                                    <address>
+                                        <p><i class="fa-solid fa-envelope"></i> gabrielamvallecillo@gmail.com</p>
+                                        <p><i class="fa-solid fa-phone"></i> +504 8896-1419</p>
+                                    </address>
+                               </div>
+                                
                             </div>
 
-                            <div>
-                                <button type="submit">Enviar</button>
                             </div>
-                    </form>
-
+                        </div>
+                        </form>
             </section>
-        
         </main>
-
-
 
         <footer>
 
