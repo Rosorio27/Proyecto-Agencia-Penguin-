@@ -251,7 +251,7 @@ header ul a:hover {
 }
 
 .overlay:hover .overlay-texto{
-    opacity: 0.3;
+    opacity: 0.3-;
 }
 
 .conteiner_sobreNosotros{
@@ -302,6 +302,7 @@ header ul a:hover {
 /*****************************************************************************************************************************************************************************************/
 
 /*Nuestros servicios*/
+
 #servicios {
     margin: 0;
     padding: 4rem 3rem;
@@ -310,19 +311,20 @@ header ul a:hover {
 }
 
 #servicios h2 {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h1);
     font-weight: 900;
     margin-bottom: 2rem;
     color: var(--color-fondo);
     text-align: center;
+    padding: 4rem 4rem;
 }
 
 .tarjeta h3 {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h2);
     color: var(--color-negro);
     font-weight: 900;
-    padding: 0.5rem 1rem; 
-    text-align: center;
+    padding: 1rem 1rem; 
+    text-align: start;
 }
 
 .tarjeta p {
@@ -332,18 +334,20 @@ header ul a:hover {
     text-align: start;
 }
 .contenedor_servicios img{
-    width: 100%;
-    height: 450px;
+    width: 600px;
+    height :300px;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
 .contenedor_servicios {
     display: flex;
     gap: 2rem;
+    padding: 4rem;
 }
 
 .tarjeta {
-   flex: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -351,7 +355,19 @@ header ul a:hover {
     border-radius: 12px;
     overflow: hidden;
     background-color: var(--color-naranja);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
+
+.tarjeta:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.tarjeta:hover img{
+    transform: scale(1.1);
+}
+
+
 
 /*********************************************************************************************************************************************************************************************/
 /*Portafolio*/
