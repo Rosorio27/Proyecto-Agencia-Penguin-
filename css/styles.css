@@ -41,6 +41,9 @@ header{
     background-color: var(--color-fondo);
     border-bottom: solid var(--color-naranja);
     overflow: hidden;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
 }
 
 header ul {
@@ -54,6 +57,7 @@ header ul a{
     color: var(--color-negro);
     font-size: var(--fs-h3);
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 header img {
@@ -68,15 +72,50 @@ header ul a:hover {
 /************************************************************************************************************************************************************/
 
 /*hero de la pagina*/
-#hero{
-   background-image: url('../assets/imagenes/fondo2.jpg');
-    background-size: cover;
-    background-position: center;
+#hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 4rem 3rem;
     margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/imagenes/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: kenBurns 20s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes kenBurns {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+
+.imagen_fondo{
+ position: absolute;
+    right: 0%;  /* distancia fija desde el borde derecho */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    opacity: 0.9;
+}
+
+.imagen_fondo img{
+    width: 100%;
 }
 
 .hero_texto {
@@ -94,6 +133,7 @@ header ul a:hover {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 .hero_texto h1 {
@@ -101,12 +141,21 @@ header ul a:hover {
     font-weight: 900;
     line-height: 1.1;
     color: #ffffff;
+    
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+
 }
 
 .hero_texto h2 {
     font-size: var(--fs-h3);
     font-weight: 400;
     color: #ffffff;
+
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
     
 }
 
@@ -118,52 +167,134 @@ header ul a:hover {
     padding: 0.75rem 2rem;
     font-weight: 700;
     font-size: var(--fs-body);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
 }
 
 .cta-hero:hover {
-    background-color: var(--color-gris);
+    transform: scale(1.075);
+    box-shadow: 8px 12px 20px rgba(238, 128, 74, 0.4);
 }
+
+@keyframes fadeInUp {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
 
 /***************************************************************************************************************************************************************************************/
 /*Sobre nosotros*/
 #sobre_nosotros{
     background-color: var(--color-fondo);
     margin: 0;
-    padding: 5rem 3rem;
+    padding: 0;
     justify-items: center;
-    border-top: solid var(--color-naranja);
-    
-   
+    border-top: 1px solid var(--color-naranja);
 }
 
 .titulo_sobreNosotros {
-      color: var(--color-negro);
+    color: var(--color-negro);
     font-size: var(--fs-h2);
     font-weight: 900;
     text-align: center;
     padding: 2rem 0;
-    
-}
 
+    /*gradiant*/
+    background: linear-gradient(90deg, var(--color-naranja), var(--color-negro));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
 
 #sobre_nosotros img {
     width: 280px;
     height: 380px;
-    object-fit: cover;
+    object-fit:fill;
     border-radius: 15px;
 }
 
-.conteiner_sobreNosotros {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
+.overlay{
+    position: relative;
+    overflow:visible;
+    border-radius: 15px;
+    width: 280px;
+    height: 380px;
 }
+
+.imagen-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-overlay:hover {
+    background-color: var(--color-naranja);
+}
+
+
+.conteiner_sobreNosotros{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto; 
+    background-color: var(--color-gris-claro);
+    padding: 6rem 8rem;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.conteiner_sobreNosotros p{
+    font-size: var(--fs-h3);
+    font-style:normal;
+    text-align: justify;
+}
+
+.conteiner_sobreNosotros h3{
+    color: var(--color-naranja);
+}
+
+.conteiner_sobreNosotros .perfil1{
+    
+    grid-column: 1 / 2; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    background-color: var(--color-fondo);
+    border-radius: 15px;
+}
+
+
+.conteiner_sobreNosotros .perfil2{
+    
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    background-color: var(--color-fondo);
+    border-radius: 15px;padding: 3rem 2rem;
+    background-color: var(--color-fondo);
+    border-radius: 15px;
+}
+
 
 /*****************************************************************************************************************************************************************************************/
 
 /*Nuestros servicios*/
-
 #servicios {
     margin: 0;
     padding: 4rem 3rem;
@@ -219,7 +350,7 @@ header ul a:hover {
 /*Portafolio*/
 
 #portafolio{   
-    display: grid;
+   display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 4rem 3rem;
@@ -227,8 +358,12 @@ header ul a:hover {
     gap: 1rem;
 }
 
-.contenedor_portafolio{
-     grid-column: 1/-1;
+
+/*conenedor_porolio*/
+
+#portafolio{   
+    display: flex;
+    flex-direction:column;  grid-column: 1/-1;
     color: var(--color-negro);
     font-size: var(--fs-h2);
     font-weight: 900;
@@ -395,7 +530,7 @@ header ul a:hover {
 /******************************************************************************************************************************************************************************/
 /*Footer*/
 footer{
-    display: grid;
+    display: grd;
     grid-template-columns: repeat(3,1fr);
     background-color: var(--color-negro);
     padding: 4rem;
@@ -403,11 +538,16 @@ footer{
 }
 
 footer ul {
-    list-style: none;
-
+    li
+footer{
+    display: gr st-style: none;
+    display: flex;
+    flex-direction:column;
 }
 
-footer address{
+footer 
+footer{
+    display: gr address{
 
     color: var(--color-naranja);
 }
