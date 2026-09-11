@@ -146,12 +146,12 @@ nav a:hover {
 }
 
 .contenedor-hero{
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    padding: 30px 30px;
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 2rem 1.5rem;
     border-radius: none;
-    max-width: 800px;
+    max-width: 100%;
     text-align: left;
     border-right: 1px var(--color-naranja-oscuro) solid; 
     font-family: "Inter", sans-serif;
@@ -1401,7 +1401,7 @@ footer {
     }
     
     .menu-toggle {
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
         width: 28px;
