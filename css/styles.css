@@ -1334,6 +1334,58 @@ footer {
     }
 }
 
+/* Tablet to Mobile (760px y menor) */
+@media (max-width: 760px) {
+    /* SOBRE NOSOTROS - Una columna y ajustes de perfil */
+    .contenedor-sobrenosotros {
+        padding: var(--spacing-xl) var(--spacing-sm);
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .contenedor-sobrenosotros .perfil1,
+    .contenedor-sobrenosotros .perfil2 {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .contenedor-sobrenosotros .perfil1 .info-perfil,
+    .contenedor-sobrenosotros .perfil2 .info-perfil {
+        padding: var(--spacing-md);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .contenedor-sobrenosotros .perfil1 .info-perfil p,
+    .contenedor-sobrenosotros .perfil2 .info-perfil p {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    /* SERVICIOS - Párrafo intro responsive */
+    .intro-servicios {
+        max-width: 100%;
+        font-size: 1.1rem;
+        padding: 0 var(--spacing-sm);
+        margin: 0 auto var(--spacing-lg);
+    }
+    
+    /* BANNER PRINCIPAL - Optimización para móvil */
+    .banner-principal {
+        min-height: 60vh;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .contenedor-banner-principal {
+        padding: 0 var(--spacing-sm);
+        max-width: 100%;
+    }
+}
+
 /* Mobile Large (768px y menor) */
 @media (max-width: 768px) {
     /* HEADER RESPONSIVE */
@@ -1648,12 +1700,26 @@ footer {
     
     /* HERO EXTRA SMALL */
     .banner-principal {
-        min-height: 50vh;
-        padding: var(--spacing-md) 0;
+        min-height: 55vh;
+        padding: var(--spacing-sm) 0;
     }
     
     .contenedor-banner-principal {
         padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .contenedor-hero {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    /* SERVICIOS INTRO EXTRA SMALL */
+    .intro-servicios {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin: 0 auto var(--spacing-md);
+        line-height: 1.4;
     }
     
     .cta-hero {
@@ -1762,6 +1828,34 @@ footer {
     
     nav {
         width: 100vw;
+    }
+    
+    /* BANNER PRINCIPAL - Eliminar espacios vacíos */
+    .banner-principal {
+        min-height: 60vh;
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .contenedor-hero {
+        padding: var(--spacing-xs) 0;
+        margin: 0;
+    }
+    
+    .contenedor-hero h1 {
+        margin-bottom: var(--spacing-xs);
+        line-height: 1.1;
+    }
+    
+    .contenedor-hero p {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* SERVICIOS INTRO ULTRA SMALL */
+    .intro-servicios {
+        font-size: 0.95rem;
+        padding: 0 0.75rem;
+        margin: 0 auto var(--spacing-sm);
+        line-height: 1.3;
     }
     
     .tarjeta {

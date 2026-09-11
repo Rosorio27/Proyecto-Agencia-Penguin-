@@ -1,8 +1,0 @@
-127.0.0.1 - - [30/Aug/2026 13:50:05] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:05] "GET /css/styles.css HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:06] "GET /assets/imagenes/Penguin-06.png HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:06] "GET /funciones.js HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:06] "GET /assets/imagenes/fondo-naranja.webp HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:06] "GET /assets/imagenes/img_sobrenosotros.jpeg HTTP/1.1" 200 -
-127.0.0.1 - - [30/Aug/2026 13:50:06] code 404, message File not found
-127.0.0.1 - - [30/Aug/2026 13:50:06] "GET /favicon.ico HTTP/1.1" 404 -
