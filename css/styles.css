@@ -693,10 +693,11 @@ nav a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 132px;
+    height: auto;
+    min-height: 120px;
     padding: 0.9rem 1.25rem;
-    background: linear-gradient(to top, var(--color-naranja-oscuro), var(--color-naranja));
-    color: var(--color-blanco);
+    background: linear-gradient(to top, var(--color-naranja-oscuro), var(--color-naranja)) !important;
+    color: var(--color-blanco) !important;
     overflow: hidden;
     transition: height 0.4s var(--easing-out);
 }
@@ -720,7 +721,7 @@ nav a:hover {
 
 /* Al posicionar el ratón, el panel se expande hacia arriba (mitad de la foto) */
 .tarjeta:hover .tarjeta-texto {
-    height: 270px;
+    min-height: 200px;
 }
 
 .tarjeta:hover .tarjeta-texto p {
